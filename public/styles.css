@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #00adad; /* Consistent background color */
+  background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+  padding: 0 16px;
+  color: #fff; /* Text color for readability */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body covers the viewport */
+}
+
+.header {
+  background-color: #8aeb90; /* Updated header color */
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Space below header */
+}
+
+.header-title {
+  color: #2a2a2a; /* Dark text for contrast */
+  font-family: "McLaren", cursive;
+  font-size: 2.5em; /* Increased font size for prominence */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.header-icon {
+  font-size: 1.5em;
+  color: #fff; /* Icon color */
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8); /* Slightly darker footer for contrast */
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto; /* Pushes footer to the bottom */
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  transition: background 0.3s; /* Smooth transition for background change */
+}
+
+footer:hover {
+  background: rgba(0, 0, 0, 0.9); /* Hover effect */
+}
+
+footer p {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.notes-container {
+  flex-grow: 1; /* Ensures the notes take the remaining space */
+  display: flex;
+  flex-wrap: wrap; /* Ensures notes stack vertically */
+  justify-content: flex-start; /* Aligns notes to the left */
+}
+
+.note {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 7px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  width: 240px;
+  margin: 16px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Added transition for box-shadow */
+  color: #333; /* Updated text color for better visibility */
+}
+
+.note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Enhanced hover effect */
+}
+
+.note h1 {
+  font-size: 1.2em;
+  margin-bottom: 6px;
+  color: #333; /* Darker text color */
+}
+
+.note p {
+  font-size: 1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #333; /* Ensuring p text is also dark */
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #f5ba13; /* Button color */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.note button:hover {
+  color: #d49d0a; /* Change color on hover */
+}
+
+form.create-note {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  margin: 30px auto 20px;
+  color: #333; /* Ensuring input text is dark */
+}
+
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  border-radius: 4px;
+  color: #333; /* Input text color */
+}
+
+form.create-note button {
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s, transform 0.3s; /* Smooth transitions for button */
+}
+
+form.create-note button:hover {
+  background: #d49d0a;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
