@@ -4,7 +4,8 @@ function Audi() {
   useEffect(() => {
     const playButton = document.getElementById('play-music');
     const pauseButton = document.getElementById('pause-music');
-    const music = new Audio('/Deema.mp3');
+    const music = new Audio(process.env.PUBLIC_URL + '/Deema.mp3');
+
 
 
 
