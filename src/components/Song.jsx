@@ -4,7 +4,9 @@ function Audi() {
   useEffect(() => {
     const playButton = document.getElementById('play-music');
     const pauseButton = document.getElementById('pause-music');
-    const music = new Audio('public/Deema.mp3');
+    const music = new Audio('/Deema.mp3');
+
+
 
     playButton.addEventListener('click', function() {
       music.play();
