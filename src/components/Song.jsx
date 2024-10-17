@@ -2,18 +2,18 @@ import React, { useEffect } from "react";
 
 function Audi() {
   useEffect(() => {
+    const music = new Audio('public/Deema.mp3'); // Try without process.env.PUBLIC_URL
+
     const playButton = document.getElementById('play-music');
     const pauseButton = document.getElementById('pause-music');
-    const music = new Audio(process.env.PUBLIC_URL + '/Deema.mp3');
 
-
-
-
-    playButton.addEventListener('click', function() {
-      music.play();
+    playButton.addEventListener('click', () => {
+      music.play().catch(error => {
+        console.error('Error playing music:', error);
+      });
     });
 
-    pauseButton.addEventListener('click', function() {
+    pauseButton.addEventListener('click', () => {
       music.pause();
     });
   }, []); // The effect runs once after the component renders
