@@ -3,6 +3,8 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
+import Audi from "./Song";
+
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -45,6 +47,7 @@ function App() {
         })}
         <div ref={endOfNotesRef} /> {/* Reference for scrolling */}
       </div>
+        <Audi />
       <Footer />
     </div>
   );

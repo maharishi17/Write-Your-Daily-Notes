@@ -152,3 +152,38 @@ form.create-note button:hover {
   background: #d49d0a;
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
+
+
+
+
+/* Centering the buttons */
+.audi-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensures the buttons are vertically centered */
+}
+
+.audi-container button {
+  background-color: #f5ba13; /* Golden color for premium look */
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: white;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for buttons */
+.audi-container button:hover {
+  background-color: #d49d0a; /* Darker gold on hover */
+  transform: translateY(-5px); /* Lifts the button slightly */
+}
+
+/* Making sure the button text aligns well */
+.audi-container button:focus {
+  outline: none; /* Remove default focus outline */
+}
