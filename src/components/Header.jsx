@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <h1 className="header-title">
         <HighlightIcon className="header-icon" />
-        Your Daily Notes
+        Write Your Daily Notes😄
       </h1>
     </header>
   );
