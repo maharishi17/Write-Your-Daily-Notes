@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 function Audi() {
   useEffect(() => {
-    const music = new Audio('/Deema.mp3'); 
+    const music = new Audio('/music/Deema.mp3');
 
     const playButton = document.getElementById('play-music');
     const pauseButton = document.getElementById('pause-music');
