@@ -22,7 +22,10 @@ function Audi() {
     <div className="audi-container">
       <button id="play-music">Play Music</button>
       <button id="pause-music">Pause Music</button>
-    </div>
+      <h1 className="mudi">If You Bored Listen Music</h1>
+      </div>
+    
+
   );
 }
 

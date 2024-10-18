@@ -1,13 +1,16 @@
+/* General Reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* General Font */
 html {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Body */
 body {
   background-color: #00adad; /* Consistent background color */
   background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
@@ -18,6 +21,7 @@ body {
   min-height: 100vh; /* Ensures the body covers the viewport */
 }
 
+/* Header */
 .header {
   background-color: #8aeb90; /* Updated header color */
   padding: 20px;
@@ -27,21 +31,24 @@ body {
   margin-bottom: 20px; /* Space below header */
 }
 
+/* Header Title */
 .header-title {
   color: #2a2a2a; /* Dark text for contrast */
   font-family: "McLaren", cursive;
-  font-size: 2.5em; /* Increased font size for prominence */
+  font-size: 3rem; /* Large font size for prominence */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px; /* Space between icon and text */
 }
 
+/* Header Icon */
 .header-icon {
   font-size: 1.5em;
   color: #fff; /* Icon color */
 }
 
+/* Footer */
 footer {
   background: rgba(0, 0, 0, 0.8); /* Slightly darker footer for contrast */
   text-align: center;
@@ -61,13 +68,15 @@ footer p {
   font-size: 0.9em;
 }
 
+/* Notes Container */
 .notes-container {
   flex-grow: 1; /* Ensures the notes take the remaining space */
   display: flex;
   flex-wrap: wrap; /* Ensures notes stack vertically */
-  justify-content: flex-start; /* Aligns notes to the left */
+  justify-content: center; /* Centering notes */
 }
 
+/* Note */
 .note {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 7px;
@@ -114,6 +123,7 @@ footer p {
   color: #d49d0a; /* Change color on hover */
 }
 
+/* Create Note Form */
 form.create-note {
   background: rgba(255, 255, 255, 0.9);
   padding: 15px;
@@ -153,15 +163,12 @@ form.create-note button:hover {
   transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-
-
-
-/* Centering the buttons */
 .audi-container {
   display: flex;
+  flex-direction: column; /* Stack elements vertically */
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ensures the buttons are vertically centered */
+  height: 100vh;
 }
 
 .audi-container button {
@@ -172,26 +179,68 @@ form.create-note button:hover {
   font-size: 1.2em;
   color: white;
   margin: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Hover effect for buttons */
 .audi-container button:hover {
   background-color: #d49d0a; /* Darker gold on hover */
-  transform: translateY(-5px); /* Lifts the button slightly */
+  transform: translateY(-5px);
 }
 
-/* Making sure the button text aligns well */
+.audi-container .mudi {
+  margin-top: 20px; /* Space between buttons and text */
+  font-size: 1.5em; /* Adjust font size */
+  color: white; /* Matches the background color */
+  text-align: center; /* Center text */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+
 .audi-container button:focus {
   outline: none; /* Remove default focus outline */
 }
 
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust header font size for smaller screens */
+  .header-title {
+    font-size: 2rem;
+    padding: 10px;
+  }
 
+  /* Stack notes vertically on small screens */
+  .notes-container {
+    display: block;
+    width: 100%;
+  }
 
+  /* Adjust note sizes for mobile */
+  .note {
+    margin: 10px auto;
+    width: 90%;
+    font-size: 1rem;
+  }
 
+  /* Adjust the padding for the Create Area on mobile */
+  .create-area {
+    width: 100%;
+    padding: 10px;
+  }
 
+  /* Button styling for smaller screens */
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
 
-
-
+  /* Adjust footer for mobile */
+  footer {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
