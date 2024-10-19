@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 function Audi() {
   useEffect(() => {
-    const music = new Audio('/music/Deema.mp3');
+    const music = new Audio('/Write-Your-Daily-Notes/music/Deema.mp3');  // Update the file path
 
     const playButton = document.getElementById('play-music');
     const pauseButton = document.getElementById('pause-music');
@@ -23,9 +23,7 @@ function Audi() {
       <button id="play-music">Play Music</button>
       <button id="pause-music">Pause Music</button>
       <h1 className="mudi">If You Bored Listen Music</h1>
-      </div>
-    
-
+    </div>
   );
 }
 
