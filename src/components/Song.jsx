@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function Audi() {
+function Song() {
   useEffect(() => {
     const music = new Audio('/Write-Your-Daily-Notes/music/Deema.mp3');  // Update the file path
 
@@ -27,4 +27,4 @@ function Audi() {
   );
 }
 
-export default Audi;
+export default Song;
